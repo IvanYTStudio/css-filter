@@ -11,6 +11,10 @@ header {
     padding-bottom: 0;
 }
 
-/* div[data-testid="stImage"] img {
-    filter: grayscale(50%);
-} */
+#drop-shadow {
+	font-family: "Source Sans Pro", sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	text-align: center;
+	pointer-events: none;
+}

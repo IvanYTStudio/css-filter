@@ -77,6 +77,7 @@ with col1:
         st.number_input("Contrast", min_value=0.0, max_value=1000.0, step=1.0, key='contrast', on_change=update_image, help='From 0  to 1000')
         st.number_input("Grayscale", min_value=0.0, max_value=1.0, step=0.01, key='grayscale', on_change=update_image, help='From 0 to 1')
         st.number_input("Hue-rotate", min_value=0, max_value=360, step=1, key='hue_rotate', on_change=update_image, help='Value in degrees. From 0 to 360')
+    st.title("drop-shadow", anchor='drop-shadow')
 
     with col12:
         st.number_input("Invert", min_value=0.0, max_value=1.0, step=0.01, key='invert', on_change=update_image, help='From 0 to 1')
