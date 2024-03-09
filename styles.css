@@ -1,0 +1,16 @@
+button[title="View fullscreen"] {
+    display: none;
+}
+
+header {
+    height: 0 !important;
+}
+
+.block-container {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+/* div[data-testid="stImage"] img {
+    filter: grayscale(50%);
+} */
