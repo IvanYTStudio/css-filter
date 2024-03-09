@@ -133,7 +133,7 @@ if css_code == 'filter:':
     css_code = ''
     with col1:
         st.code(f'{css_code}', language='css')
-else
+else:
     with col1:
         st.code(f'{css_code};', language='css')
 
