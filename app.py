@@ -57,7 +57,7 @@ def update_image():
                         invert({st.session_state['invert']}) 
                         opacity({st.session_state['opacity']}) 
                         saturate({st.session_state['saturate']}) 
-                        sepia({st.session_state['sepia']})) !important;
+                        sepia({st.session_state['sepia']}) !important;
                     }}
                 </style>''', unsafe_allow_html=True)
 
