@@ -1,6 +1,6 @@
 import streamlit as st
 
-st.set_page_config(page_title='CSS Fitler Preview', page_icon='favicon.ico', layout='wide')
+st.set_page_config(page_title='CSS Filter Preview', page_icon='favicon.ico', layout='wide')
 
 if 'blur' not in st.session_state:
     st.session_state['blur'] = 0.0
@@ -62,9 +62,12 @@ def update_image():
                 </style>''', unsafe_allow_html=True)
 
 
-col1, col2, col3 = st.columns([6.5, 5, 2.5])
+col1, col2, col3, col4 = st.columns([4.5, 2, 5, 2.5])
 
-with col2:
+with col1:
+    st.title("Filter functions", anchor="functions_title")
+
+with col3:
     uploaded_image = st.file_uploader("Upload your image", type=['png', 'jpg', 'svg', 'jpeg', 'webp'])
 
 col1, col2, col3, col4 = st.columns([4,1,6,1])
