@@ -57,7 +57,7 @@ def update_image():
                         invert({st.session_state['invert']}) 
                         opacity({st.session_state['opacity']}) 
                         saturate({st.session_state['saturate']}) 
-                        sepia({st.session_state['sepia']}));
+                        sepia({st.session_state['sepia']})) !important;
                     }}
                 </style>''', unsafe_allow_html=True)
 
@@ -99,11 +99,6 @@ with col1:
 
 css_code = 'filter:'
 
-
-# drop-shadow({st.session_state['drop_shadow_1']}px {st.session_state['drop_shadow_2']}px {st.session_state['drop_shadow_3']}px {st.session_state['drop_shadow_color']}) 
-
-
-
 if st.session_state['blur'] != 0.0:
     css_code += f" blur({round(st.session_state['blur'],2)}px)"
 
@@ -136,9 +131,11 @@ if st.session_state['sepia'] != 0.0:
 
 if css_code == 'filter:':
     css_code = ''
-
-with col1:
-    st.code(f'{css_code};', language='css')
+    with col1:
+        st.code(f'{css_code}', language='css')
+else
+    with col1:
+        st.code(f'{css_code};', language='css')
 
 try:
     with col3:
